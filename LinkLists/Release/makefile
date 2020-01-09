@@ -23,19 +23,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: HackerRank
+all: LinkLists
 
 # Tool invocations
-HackerRank: $(OBJS) $(USER_OBJS)
+LinkLists: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "HackerRank" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "LinkLists" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) HackerRank
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) LinkLists
 	-@echo ' '
 
 .PHONY: all clean dependents

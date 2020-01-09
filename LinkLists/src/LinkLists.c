@@ -318,7 +318,7 @@ struct LinkListNode* AddTwoLinkList(struct LinkListNode* listA,struct LinkListNo
 	if (carry) {
 
 		struct LinkListNode* tmp = (struct LinkListNode*) malloc(sizeof(struct LinkListNode));
-		tmp->data = sum % 10;
+		tmp->data = carry;
 		tmp->next = NULL;
 
 		ptr->next=tmp;
@@ -882,15 +882,15 @@ int main(void) {
 
 	struct LinkListNode *listA = NULL;
 	insertAtFrontLinkList(&listA, 5);
-	insertAtFrontLinkList(&listA, 4);
-	insertAtFrontLinkList(&listA, 3);
-	insertAtFrontLinkList(&listA, 2);
-	insertAtFrontLinkList(&listA, 1);
+//	insertAtFrontLinkList(&listA, 4);
+//	insertAtFrontLinkList(&listA, 3);
+//	insertAtFrontLinkList(&listA, 2);
+//	insertAtFrontLinkList(&listA, 1);
 
 	struct LinkListNode *listB = NULL;
 	insertAtFrontLinkList(&listB, 7);
-	insertAtFrontLinkList(&listB, 3);
-	insertAtFrontLinkList(&listB, 1);
+//	insertAtFrontLinkList(&listB, 3);
+//	insertAtFrontLinkList(&listB, 1);
 /*
 	printLinklist(head);
 	printf("\nsize=%d\n", sizeOfLinkListRecursive(head));
@@ -919,18 +919,18 @@ int main(void) {
 	printf("\n");
 	printLinklist(head);
 */
-/*
+	/*
 	 printLinklist(head);
 	 rotateLinkList(&head,2);
 	 printf("\n");
 	 printLinklist(head);
-*/
-/*
+	 */
+	/*
 	 printLinklist(head);
 	 rotateCounterClockwiseLinkList(&head,1);
 	 printf("\n");
 	 printLinklist(head);
-*/
+	 */
 
 //create loop in linklist
 
@@ -969,14 +969,14 @@ int main(void) {
 	printLinklist(head);
 */
 
-/*	printLinklist(listA);
+	printLinklist(listA);
 	printf("\n");
 	printLinklist(listB);
 	printf("\n");
 
 	struct LinkListNode* result =AddTwoLinkList(listA,listB);
 	printLinklist(result);
-*/
+
 /*
 	printLinklist(listA);
 	printf("\n");
@@ -1068,7 +1068,9 @@ int main(void) {
 
 
 	//printLinklist(head);
-    printf("\n");
+
+/*
+	printf("\n");
 	head->down=getNewLinkListNode(5);
 	head->down->down=getNewLinkListNode(7);
 	head->next->next->down=getNewLinkListNode(10);
@@ -1076,6 +1078,7 @@ int main(void) {
 
 
     head=flattenLinkList(head);
+*/
 
 /*    while(head){
     	printf(" %d",head->data);
@@ -1105,11 +1108,11 @@ int main(void) {
 	getSortedlisthavingZeroOneTwoAsElementsLinklistAlternative(head);
 	printLinklist(head);
 */
-
+/*
 	printLinklist(listA);
 	sortAbsoluteValueSortedLinkList(&listA);
 	printLinklist(listA);
-
+	 */
 
 
 	return EXIT_SUCCESS;
