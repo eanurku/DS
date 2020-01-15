@@ -39,6 +39,7 @@ int sizeOfQueueAsLinkList(struct LinkListNode *front,struct LinkListNode *rear);
 int dequeueQueueAsLinkList(struct LinkListNode **front,struct LinkListNode **rear);
 void enqueueQueueAsLinkList(struct LinkListNode **front,struct LinkListNode **rear,int item);
 
+struct QueueAsArray* createDeque(int capacity);
 int isFullDeque(struct QueueAsArray *deque);
 int isEmptyDeque(struct QueueAsArray *deque);
 void insertAtFrontDeque(struct QueueAsArray *deque, int item);

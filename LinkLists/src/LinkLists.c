@@ -969,13 +969,13 @@ int main(void) {
 	printLinklist(head);
 */
 
-	printLinklist(listA);
-	printf("\n");
-	printLinklist(listB);
-	printf("\n");
-
-	struct LinkListNode* result =AddTwoLinkList(listA,listB);
-	printLinklist(result);
+//	printLinklist(listA);
+//	printf("\n");
+//	printLinklist(listB);
+//	printf("\n");
+//
+//	struct LinkListNode* result =AddTwoLinkList(listA,listB);
+//	printLinklist(result);
 
 /*
 	printLinklist(listA);
@@ -1067,18 +1067,18 @@ int main(void) {
 */
 
 
-	//printLinklist(head);
-
-/*
-	printf("\n");
-	head->down=getNewLinkListNode(5);
-	head->down->down=getNewLinkListNode(7);
-	head->next->next->down=getNewLinkListNode(10);
-	head->next->next->down->down=getNewLinkListNode(15);
+	printLinklist(head);
 
 
-    head=flattenLinkList(head);
-*/
+//	printf("\n");
+//	head->down=getNewLinkListNode(5);
+//	head->down->down=getNewLinkListNode(7);
+//	head->next->next->down=getNewLinkListNode(10);
+//	head->next->next->down->down=getNewLinkListNode(15);
+//
+//
+//    head=flattenLinkList(head);
+
 
 /*    while(head){
     	printf(" %d",head->data);

@@ -168,7 +168,9 @@ int popFromStackAsLinkList(struct LinkListNode **top){
 	struct LinkListNode *deletedNode=(*top);
 	(*top)=(*top)->next;
 	int retVal=deletedNode->data;
+
 	free(deletedNode);
+	deletedNode->next=NULL;
 
 
 
@@ -1357,6 +1359,7 @@ char * deParenthesesiationOfAlgebricExp(char *exp){
 
 		if(exp[i]=='(' && i==0){
 			;
+
 		}else if(exp[i]=='(' && i>0){
 
 			if(exp[i-1]=='('){
@@ -1449,7 +1452,7 @@ int isStackpermutation(int first[],int second[],int size){
 		}
 	}
 
-	return i==3 && isEmptyStackAsLinkList(stack);
+	return i==count && isEmptyStackAsLinkList(stack);
 
 }
 int main(void) {
@@ -1464,7 +1467,7 @@ int main(void) {
 
 	while(!isEmptyStackAsArray(stackAsArray))
 		printf("%c ",popFromStackAsArray(stackAsArray));
-*/
+
 
 
 /*
@@ -1489,13 +1492,15 @@ int main(void) {
 
 */
 
-/*
-	char *str=(char *)malloc(100*sizeof(char));
-	gets(str);
-	postfixExpEvaluation(str);
-*/
+
+//	char *str=(char *)malloc(100*sizeof(char));
+//	gets(str);
+//	postfixExpEvaluation(str);
+
 
 /*
+    // input: “[()]{}{[()()]()}” ,output:YES
+    // input : “[(])”            ,output:NO
 	char *str=(char *)malloc(100*sizeof(char));
 	gets(str);
 	int val=areParenthesesBalanced(str);
@@ -1552,6 +1557,11 @@ int main(void) {
 */
 
 /*
+ * Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x
+ * is the first greater element on the right side of x in array. Elements for which no greater element exist,
+ * consider next greater element as -1.
+ */
+/*
 	int array[]={10,9,11,1,12,6};
 	int size=6;
 	NextgreaterElement(array,size);
@@ -1573,18 +1583,25 @@ int main(void) {
 		printf("%d ",spanArray[i]);
 	}
 */
+
 /*
-	int size=7,i;
-	int array[]={100,80,60,70,60,75,85};
+ *The span Si of the stock’s price on a given day i is defined as the maximum number of consecutive days just before the given day,
+ *for which the price of the stock on the current day is less than or equal to its price on the given day.For example, if an
+ *The array of 7 days prices is given as {100, 80, 60, 70, 60, 75, 85}, then the span values for corresponding 7 days are {1, 1, 1, 2, 1, 4, 6}
+ */
 
-	int *spanArray=(int *)calloc(size,sizeof(int));
 
-	stockspanCalculation(array,size,spanArray);
+//	int size=7,i;
+//	int priceArray[]={100,80,60,70,60,75,85};
+//
+//	int *spanArray=(int *)calloc(size,sizeof(int));
+//
+//	stockspanCalculation(priceArray,size,spanArray);
+//
+//	for(i=0;i<size;i++){
+//		printf("%d ",spanArray[i]);
+//	}
 
-	for(i=0;i<size;i++){
-		printf("%d ",spanArray[i]);
-	}
-*/
 
 /*
 
@@ -1633,6 +1650,13 @@ int main(void) {
 */
 
 /*
+ *In a party of N people, only one person is known to everyone. Such a person may be present in the party, if yes,
+ *(s)he doesn’t know anyone in the party.We can only ask questions like “does A know B? “. Find the stranger
+ *(celebrity) in minimum number of questions.We can describe the problem input as an array of numbers/characters
+ *representing persons in the party. We also have a hypothetical function HaveAcquaintance(A, B) which returns
+ *true if A knows B, false otherwise. How can we solve the problem.
+ */
+/*
 	int n=4;
 	int array[4][4]={{0,0,0,1},
 			       {0,0,0,0},
@@ -1655,10 +1679,10 @@ int main(void) {
 
 */
 
-/*
+
 	char *str="(((a+b)-(c+d))+m)";
 	printf("algebric exp without parenthese=%s",deParenthesesiationOfAlgebricExp(str));
-*/
+
 
 /*
 
@@ -1666,6 +1690,19 @@ int main(void) {
 
 */
 
+	/*
+	 * A stack permutation is a permutation of objects in the given input queue which is done by
+	 * transferring elements from input queue to the output queue with the help of a stack and the
+	 *  built-in push and pop functions.The well defined rules are:
+    	1.Only dequeue from the input queue.
+    	2.Use inbuilt push, pop functions in the single stack.
+    	3.Stack and input queue must be empty at the end.
+    	4.Only enqueue to the output queue.
+
+	*There are a huge number of permutations possible using a stack for a single input queue.
+	*Given two arrays, both of unique elements. One represents the input queue and the other
+ 	*represents the output queue. Our task is to check if the given output is possible through stack permutation.
+ 	*/
 /*
 	int arr1[]={1,2,3};
 	int arr2[]={3,2,1};
