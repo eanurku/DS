@@ -1497,6 +1497,10 @@ int main(void) {
 	printf("\n%d",getBinomialCoefficientByDP(5,2));
 	printf("\n%d",getBinomialCoefficientByDPSpaceOptimized(5,2));
 */
+
+	/*
+	 * P(n, k) = P(n-1, k) + k* P(n-1, k-1)
+	 */
 /*
 
 	printf("\n%d",getPermutationCoefficient(10,2));
@@ -1817,8 +1821,8 @@ int main(void) {
 	 */
 /*
 	int mat[][3]={{1,2,3},
-			 {4,5,6},
-			 {7,8,9}};
+			     {4,5,6},
+			     {7,8,9}};
 	int m=3,n=3;
 
 	printf("\n%f",getPathWithMaxAvergaeByDP(mat,m,n));
@@ -1890,8 +1894,12 @@ int main(void) {
 	printf("\n%d",getMinCostToFillBagByDP(cost,size,5));
 */
 
-	/*
-	 * 0-1 Knapsack Problem)
+	/*Given weights and values of n items, put these items in a knapsack of capacity W to get the maximum total
+	 * value in the knapsack. In other words, given two integer arrays val[0..n-1] and wt[0..n-1] which represent
+	 * values and weights associated with n items respectively. Also given an integer W which represents knapsack
+	 * capacity, find out the maximum value subset of val[] such that sum of the weights of this subset is smaller
+	 *  than or equal to W. You cannot break an item, either pick the complete item, or don’t pick it (0-1 property).
+	 * 0-1 Knapsack Problem
 	 */
 /*
 	int weight[]={10,20,30};

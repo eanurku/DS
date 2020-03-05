@@ -107,6 +107,7 @@ void leavesTraversalLeftToRightRecursiveBinaryTree(struct BinaryTreeNode *root);
 void leavesTraversalLeftToRightIterativeBinaryTree(struct BinaryTreeNode *root);
 
 
+
 void getMinMaxOfVerticalLineNumbersBinaryTree(struct BinaryTreeNode *root,int *min,int *max,int dist);
 void traverseTheVerticalLineNumberOfBinarytree(struct BinaryTreeNode *root,int line,int dist);
 void verticalTraversalOptimizedSpaceBinaryTree(struct BinaryTreeNode *root);
