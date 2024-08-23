@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <limits.h>
 #include "commonDeclarations.h"
-#include "/home/anurag/Desktop/CPROGG/DataStructure-geeksforgeeks_workspace/Algorithms/StackFunctions.c"
+#include "C:\Users\anura\eanurku\DS\Algorithms\StackFunctions.c"
 //function prototypes start
 
 struct LinkListNode* getNewLinkListNode(int val);

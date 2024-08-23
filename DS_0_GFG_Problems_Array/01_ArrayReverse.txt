@@ -1,0 +1,5 @@
+    1. Array Reverse Using an Extra Array (Non In-place):
+    2. Array Reverse Using a Loop (In-place):
+    3. Array Reverse Inbuilt Methods (Non In-place):
+    4. Array Reverse Recursion (In-place or Non In-place):
+    5. Array Reverse Stack (Non In-place): 

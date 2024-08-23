@@ -12,8 +12,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-#include "/home/anurag/Desktop/CPROGG/DataStructure-geeksforgeeks_workspace/Algorithms/commonDeclarations.h"
-#include "/home/anurag/Desktop/CPROGG/DataStructure-geeksforgeeks_workspace/Algorithms/StackFunctions.c"
+#include "C:\Users\anura\eanurku\DS\Algorithms\commonDeclarations.h"
+#include "C:\Users\anura\eanurku\DS\Algorithms\StackFunctions.c"
+
 //function prototypes start
 
 struct LinkListNode* getNewLinkListNode(int val);
@@ -891,12 +892,14 @@ int main(void) {
 	insertAtFrontLinkList(&listB, 7);
 //	insertAtFrontLinkList(&listB, 3);
 //	insertAtFrontLinkList(&listB, 1);
-/*
-	printLinklist(head);
+
+/*	printLinklist(head);
 	printf("\nsize=%d\n", sizeOfLinkListRecursive(head));
 	reverseLinkList(&head);
 	printLinklist(head);
 */
+
+
 /*
 	 printLinklist(listA);
 	 printf("\n");
