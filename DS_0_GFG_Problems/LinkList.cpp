@@ -1,3 +1,11 @@
+//============================================================================
+// Name        : Test.cpp
+// Author      : anurag
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C, Ansi-style
+//============================================================================
+
 /*
  ============================================================================
  Name        : LinkLists.c
@@ -9,11 +17,14 @@
  */
 
 
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-#include "C:\Users\anura\eanurku\DS\Algorithms\commonDeclarations.h"
-#include "C:\Users\anura\eanurku\DS\Algorithms\StackFunctions.c"
+#include "functions/commonDeclarations.h"
+#include "functions/StackFunctions.cpp"
+
+using namespace std;
 
 //function prototypes start
 
@@ -869,27 +880,29 @@ void sortAbsoluteValueSortedLinkList(struct LinkListNode** headRef){
 		}
 	}
 }
-int main(void) {
-
-	struct LinkListNode *head = NULL;
+int main() {
 
 
-	insertAtFrontLinkList(&head, 5);
-	insertAtFrontLinkList(&head, 4);
-	insertAtFrontLinkList(&head, 3);
-	insertAtFrontLinkList(&head, 2);
-	insertAtFrontLinkList(&head, 1);
-
-
-	struct LinkListNode *listA = NULL;
-	insertAtFrontLinkList(&listA, 5);
+	cout<<"fuck off"<<endl;
+//	struct LinkListNode *head = NULL;
+//
+//
+//	insertAtFrontLinkList(&head, 5);
+//	insertAtFrontLinkList(&head, 4);
+//	insertAtFrontLinkList(&head, 3);
+//	insertAtFrontLinkList(&head, 2);
+//	insertAtFrontLinkList(&head, 1);
+//
+//
+//	struct LinkListNode *listA = NULL;
+//	insertAtFrontLinkList(&listA, 5);
 //	insertAtFrontLinkList(&listA, 4);
 //	insertAtFrontLinkList(&listA, 3);
 //	insertAtFrontLinkList(&listA, 2);
 //	insertAtFrontLinkList(&listA, 1);
 
-	struct LinkListNode *listB = NULL;
-	insertAtFrontLinkList(&listB, 7);
+//	struct LinkListNode *listB = NULL;
+//	insertAtFrontLinkList(&listB, 7);
 //	insertAtFrontLinkList(&listB, 3);
 //	insertAtFrontLinkList(&listB, 1);
 
@@ -1070,7 +1083,7 @@ int main(void) {
 */
 
 
-	printLinklist(head);
+	//printLinklist(head);
 
 
 //	printf("\n");
@@ -1120,3 +1133,4 @@ int main(void) {
 
 	return EXIT_SUCCESS;
 }
+
