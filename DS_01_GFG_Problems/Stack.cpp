@@ -8,11 +8,17 @@
  ============================================================================
  */
 
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-#include "/home/anurag/Desktop/CPROGG/DataStructure-geeksforgeeks_workspace/Algorithms/commonDeclarations.h"
-#include "/home/anurag/Desktop/CPROGG/DataStructure-geeksforgeeks_workspace/Algorithms/LinkListFunctions.c"
+#include <string.h>
+#include <math.h>
+
+#include "functions/commonDeclarations.h"
+#include "functions/LinkListFunctions.c"
+
+using namespace std;
 
 
 struct StackAsArray* createStackAsArray(int capacity);
@@ -62,12 +68,16 @@ void implementTowerOfHanoiByStack();
 int isCelebrityExist(int array[4][4],int n);
 int isCelebrityExistByStack(int array[4][4],int n);
 
+void  applyOperatorAndpushResult(struct LinkListNode **stack,char operatorValue);
 void evaluateInfixExpression(char *str);
 int findMaxDepthOfparentheses(char *str);
 int longestValidParenthesesSubstring(char *str);
 char * deParenthesesiationOfAlgebricExp(char *exp);
 int reverseNumberByStack(int number);
 int isStackpermutation(int first[],int second[],int size);
+
+
+
 
 struct StackAsArray* createStackAsArray(int capacity){
 
@@ -134,6 +144,8 @@ int popFromStackAsArray(struct StackAsArray *stackAsArray){
 
 	return retVal;
 }
+
+
 int sizeOfStackAslinkList(struct LinkListNode *top){
 
 	struct LinkListNode *ptr=top;
@@ -947,7 +959,7 @@ int isFullStackbyBinHeap(struct BinHeap *heap){
 
 	return heap->heapSize==heap->heapCapacity;
 }
-pushToStackByMinHeap(struct BinHeap *heap,int val,int priority){
+void pushToStackByMinHeap(struct BinHeap *heap,int val,int priority){
 
 	insertInMinHeap(heap,val,priority);
 }
@@ -1151,17 +1163,22 @@ void implementTowerOfHanoiByStack(){
 	}
 
 }
-void  applyOperatorAndpushResult(struct LinkListNode **stack,char operator){
+void  applyOperatorAndpushResult(struct LinkListNode **stack,char operatorValue){
 
 	int value2=popFromStackAsLinkList(stack);
 	int value1=popFromStackAsLinkList(stack);
-	switch(operator){
+
+
+	switch(operatorValue){
 	case '+':pushToStackAsLinkList(stack,value1+value2);break;
 	case '-':pushToStackAsLinkList(stack,value1-value2);break;
 	case '*':pushToStackAsLinkList(stack,value1*value2);break;
 	case '/':pushToStackAsLinkList(stack,value1/value2);break;
 	}
+
+	return;
 }
+
 void evaluateInfixExpression(char *str){
 
 	struct StackAsArray *stack =createStackAsArray(100);
@@ -1499,8 +1516,8 @@ int main(void) {
 
 
 /*
-    // input: “[()]{}{[()()]()}” ,output:YES
-    // input : “[(])”            ,output:NO
+    // input: â€œ[()]{}{[()()]()}â€� ,output:YES
+    // input : â€œ[(])â€�            ,output:NO
 	char *str=(char *)malloc(100*sizeof(char));
 	gets(str);
 	int val=areParenthesesBalanced(str);
@@ -1585,7 +1602,7 @@ int main(void) {
 */
 
 /*
- *The span Si of the stock’s price on a given day i is defined as the maximum number of consecutive days just before the given day,
+ *The span Si of the stockâ€™s price on a given day i is defined as the maximum number of consecutive days just before the given day,
  *for which the price of the stock on the current day is less than or equal to its price on the given day.For example, if an
  *The array of 7 days prices is given as {100, 80, 60, 70, 60, 75, 85}, then the span values for corresponding 7 days are {1, 1, 1, 2, 1, 4, 6}
  */
@@ -1651,7 +1668,7 @@ int main(void) {
 
 /*
  *In a party of N people, only one person is known to everyone. Such a person may be present in the party, if yes,
- *(s)he doesn’t know anyone in the party.We can only ask questions like “does A know B? “. Find the stranger
+ *(s)he doesnâ€™t know anyone in the party.We can only ask questions like â€œdoes A know B? â€œ. Find the stranger
  *(celebrity) in minimum number of questions.We can describe the problem input as an array of numbers/characters
  *representing persons in the party. We also have a hypothetical function HaveAcquaintance(A, B) which returns
  *true if A knows B, false otherwise. How can we solve the problem.

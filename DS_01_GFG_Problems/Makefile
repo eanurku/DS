@@ -1,7 +1,7 @@
 clean:
 	-del -f *.exe
 	
-all:  test Array LinkList GenericLinkList
+all:  test Array LinkList GenericLinkList Stack
 
 test: test.cpp
 	g++ -std=c++2a -o test test.cpp
@@ -14,3 +14,6 @@ LinkList: LinkList.cpp
 
 GenericLinkList: GenericLinkList.cpp
 	g++ -std=c++2a -o GenericLinkList GenericLinkList.cpp
+
+Stack: Stack.cpp
+	g++ -std=c++2a -o Stack Stack.cpp
