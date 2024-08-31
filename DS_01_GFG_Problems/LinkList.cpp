@@ -883,34 +883,34 @@ void sortAbsoluteValueSortedLinkList(struct LinkListNode** headRef){
 int main() {
 
 
-	cout<<"fuck off"<<endl;
-//	struct LinkListNode *head = NULL;
-//
-//
-//	insertAtFrontLinkList(&head, 5);
-//	insertAtFrontLinkList(&head, 4);
-//	insertAtFrontLinkList(&head, 3);
-//	insertAtFrontLinkList(&head, 2);
-//	insertAtFrontLinkList(&head, 1);
-//
-//
-//	struct LinkListNode *listA = NULL;
-//	insertAtFrontLinkList(&listA, 5);
-//	insertAtFrontLinkList(&listA, 4);
-//	insertAtFrontLinkList(&listA, 3);
-//	insertAtFrontLinkList(&listA, 2);
-//	insertAtFrontLinkList(&listA, 1);
 
-//	struct LinkListNode *listB = NULL;
-//	insertAtFrontLinkList(&listB, 7);
-//	insertAtFrontLinkList(&listB, 3);
-//	insertAtFrontLinkList(&listB, 1);
+	struct LinkListNode *head = NULL;
 
-/*	printLinklist(head);
+
+	insertAtFrontLinkList(&head, 5);
+	insertAtFrontLinkList(&head, 4);
+	insertAtFrontLinkList(&head, 3);
+	insertAtFrontLinkList(&head, 2);
+	insertAtFrontLinkList(&head, 1);
+
+
+	struct LinkListNode *listA = NULL;
+	insertAtFrontLinkList(&listA, 5);
+	insertAtFrontLinkList(&listA, 4);
+	insertAtFrontLinkList(&listA, 3);
+	insertAtFrontLinkList(&listA, 2);
+	insertAtFrontLinkList(&listA, 1);
+
+	struct LinkListNode *listB = NULL;
+	insertAtFrontLinkList(&listB, 7);
+	insertAtFrontLinkList(&listB, 3);
+	insertAtFrontLinkList(&listB, 1);
+
+	printLinklist(head);
 	printf("\nsize=%d\n", sizeOfLinkListRecursive(head));
 	reverseLinkList(&head);
 	printLinklist(head);
-*/
+
 
 
 /*
